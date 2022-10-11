@@ -1,5 +1,4 @@
 'use strict';
-
 ///selecting Elements
 const player0El = document.querySelector('.player--0');
 const player1El = document.querySelector('.player--1');
@@ -44,11 +43,9 @@ const switchPlayer = function () {
 };
 
 //rolling dice functionality
-
 btnRoll.addEventListener('click', function () {
   if (playing) {
     //1. Generate a random dice roll
-
     const dice = Math.trunc(Math.random() * 6) + 1;
     console.log(dice);
 
@@ -80,7 +77,7 @@ btnHold.addEventListener('click', function () {
     //   scores[1] = scores[1] + currenScore
 
     //2 check if player's score is >= 100 .. finish the game
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       //finish the game
       playing = false;
       diceEl.classList.add('hidden');
